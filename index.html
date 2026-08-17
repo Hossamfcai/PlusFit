@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PlusFit</title>
+    <link rel="stylesheet" href="./CSS/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --color-primary: #69f8f1;
+        --color-primary-100: #00201F;
+        --color-secondary: #1a1a1a;
+        --color-Teratiary: #ffffff;
+        --color-Teratiary-100: #1A1C1C;
+        --color-Teratiary-900: #E2E2E2;
+        --color-neutral: #000000;
+        --font-headline: "Montserrat", sans-serif; 
+        --font-body: "Inter", sans-serif; 
+      }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-neutral font-body">
+    <nav class="flex w-full justify-between md:justify-around items-center px-5 lg:px-18 py-4 border border-b-Teratiary-100">
+      <div class="flex items-center gap-2">
+        <div class="w-8 h-8">
+          <img class="w-full" src="./assets/images/plusfit_logo.png" alt="" />
+        </div>
+        <h3 class="font-headline text-Teratiary text-2xl font-bold text-primary tracking-tighter">PlusFit</h1>
+      </div>
+      <ul class="hidden md:flex">
+        <li class="mx-4"><a href="" class=" text-Teratiary-900 text-md font-semibold py-1 px-3 hover:text-primary hover:bg-primary-100 rounded-sm transition-all duration-300">Features</a></li>
+        <li class="mx-4"><a href="" class=" text-Teratiary-900 text-md font-semibold py-1 px-3 hover:text-primary hover:bg-primary-100 rounded-sm transition-all duration-300">About</a></li>
+        <li class="mx-4"><a href="" class=" text-Teratiary-900 text-md font-semibold py-1 px-3 hover:text-primary hover:bg-primary-100 rounded-sm transition-all duration-300">Pricing</a></li>
+        <li class="mx-4"><a href="" class=" text-Teratiary-900 text-md font-semibold py-1 px-3 hover:text-primary hover:bg-primary-100 rounded-sm transition-all duration-300">Contact</a></li>
+      </ul>
+      <a class="bg-primary px-4 sm:px-7 py-2 font-bold fon-headline rounded-sm hover:scale-105 transition-transform duration-300 drop-shadow-lg">Buy Now</a>
+    </nav>
+
+    <script src="./Js/script.js"></script>
+  </body>
+</html>
