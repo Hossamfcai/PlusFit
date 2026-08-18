@@ -9,17 +9,23 @@
     <style type="text/tailwindcss">
       @theme {
         --color-primary: #69f8f1;
-        --color-primary-100: #00201F;
+        --color-primary-100: #00201f;
+        --color-primary-200: #003735;
         --color-secondary: #1a1a1a;
         --color-Teratiary: #ffffff;
-        --color-Teratiary-100: #1A1C1C;
-         --color-Teratiary-800: #C8C6C5;
-        --color-Teratiary-900: #E2E2E2;
+        --color-Teratiary-100: #1a1c1c;
+        --color-Teratiary-800: #c8c6c5;
+        --color-Teratiary-900: #e2e2e2;
         --color-neutral: #000000;
-        --font-headline: "Montserrat", sans-serif; 
-        --font-body: "Inter", sans-serif; 
+        --font-headline: "Montserrat", sans-serif;
+        --font-body: "Inter", sans-serif;
+        --breakpoint-xs: 35rem;
       }
     </style>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -34,43 +40,167 @@
     />
   </head>
   <body class="bg-neutral font-body">
-    <nav class="flex w-full justify-between md:justify-around items-center px-5 lg:px-18 py-4 border border-b-Teratiary-100">
+    <nav
+      class="flex w-full justify-between md:justify-around items-center px-5 lg:px-18 py-4 border border-b-Teratiary-100"
+    >
       <div class="flex items-center gap-2">
         <div class="w-8 h-8">
           <img class="w-full" src="./assets/images/plusfit_logo.png" alt="" />
         </div>
-        <h3 class="font-headline text-Teratiary text-2xl font-bold text-primary tracking-tighter">PlusFit</h1>
+        <h3
+          class="font-headline text-Teratiary text-2xl font-bold text-primary tracking-tighter"
+        >
+          PlusFit
+        </h3>
       </div>
       <ul class="hidden md:flex">
-        <li class="mx-4"><a href="" class=" text-Teratiary-800 text-md font-semibold py-1 px-3 hover:text-primary hover:bg-primary-100 rounded-sm transition-all duration-300">Features</a></li>
-        <li class="mx-4"><a href="" class=" text-Teratiary-800 text-md font-semibold py-1 px-3 hover:text-primary hover:bg-primary-100 rounded-sm transition-all duration-300">About</a></li>
-        <li class="mx-4"><a href="" class=" text-Teratiary-800 text-md font-semibold py-1 px-3 hover:text-primary hover:bg-primary-100 rounded-sm transition-all duration-300">Pricing</a></li>
-        <li class="mx-4"><a href="" class=" text-Teratiary-800 text-md font-semibold py-1 px-3 hover:text-primary hover:bg-primary-100 rounded-sm transition-all duration-300">Contact</a></li>
+        <li class="mx-4">
+          <a
+            href=""
+            class="text-Teratiary-800 text-md font-semibold py-1 px-3 hover:text-primary hover:bg-primary-100 rounded-sm transition-all duration-300"
+            >Features</a
+          >
+        </li>
+        <li class="mx-4">
+          <a
+            href=""
+            class="text-Teratiary-800 text-md font-semibold py-1 px-3 hover:text-primary hover:bg-primary-100 rounded-sm transition-all duration-300"
+            >About</a
+          >
+        </li>
+        <li class="mx-4">
+          <a
+            href=""
+            class="text-Teratiary-800 text-md font-semibold py-1 px-3 hover:text-primary hover:bg-primary-100 rounded-sm transition-all duration-300"
+            >Pricing</a
+          >
+        </li>
+        <li class="mx-4">
+          <a
+            href=""
+            class="text-Teratiary-800 text-md font-semibold py-1 px-3 hover:text-primary hover:bg-primary-100 rounded-sm transition-all duration-300"
+            >Contact</a
+          >
+        </li>
       </ul>
-      <a class="bg-primary px-4 sm:px-7 py-2 font-bold fon-headline rounded-xs cursor-pointer hover:scale-105 transition-transform duration-300 drop-shadow-lg">Buy Now</a>
+      <a
+        class="bg-primary px-4 sm:px-7 py-2 font-bold fon-headline rounded-xs cursor-pointer hover:scale-105 transition-transform duration-300 drop-shadow-lg"
+        >Buy Now</a
+      >
     </nav>
 
-    <section class="w-full min-h-[90dvh] my-5 px-2 py-5 md:p-5 grid grid-col-1 md:gap-5 md:grid-cols-2">
-      <div class="flex justify-end">
-          <div class="max-w-160 flex flex-col  gap-8 justify-center ">
-          <h1 class="bg-gradient-to-r from-Teratiary to-primary bg-clip-text text-transparent text-[2.5rem] leading-none md:text-6xl font-bold font-headline">Peak Performance on Your Wrist</h1>
-          <p class="text-Teratiary-800 font-body">Track heart rate, sleep, and daily activity with precision. Syncs instantly with the PlusFit app to keep you in the zone.</p>
-          <div class="flex gap-3">
-            <a href="" class="bg-primary px-5 py-2 sm:px-7 sm:py-3 font-bold fon-headline rounded-xs cursor-pointer hover:scale-105 transition-transform duration-300 drop-shadow-lg">BUY NOW</a>
-            <a href="" class="bg-transparent px-5 py-2 sm:px-7 sm:py-3 text-Teratiary border border-Teratiary-800 font-bold fon-headline rounded-xs cursor-pointer hover:scale-105 transition-transform duration-300 drop-shadow-lg">EXPLORE</a>
+    <main class="mx-5">
+      <section
+        class="w-full min-h-[90dvh] my-5 py-5 grid grid-col-1 md:gap-5 md:grid-cols-2"
+      >
+        <div class="flex justify-end">
+          <div class="max-w-160 flex flex-col gap-8 justify-center">
+            <h1
+              class="bg-gradient-to-r from-Teratiary to-primary bg-clip-text text-transparent text-[2.5rem] leading-none md:text-6xl font-bold font-headline"
+            >
+              Peak Performance on Your Wrist
+            </h1>
+            <p class="text-Teratiary-800 font-body">
+              Track heart rate, sleep, and daily activity with precision. Syncs
+              instantly with the PlusFit app to keep you in the zone.
+            </p>
+            <div class="flex gap-3">
+              <a
+                href=""
+                class="bg-primary px-5 py-2 sm:px-7 sm:py-3 font-bold fon-headline rounded-xs cursor-pointer hover:scale-105 transition-transform duration-300 drop-shadow-lg"
+                >BUY NOW</a
+              >
+              <a
+                href=""
+                class="bg-transparent px-5 py-2 sm:px-7 sm:py-3 text-Teratiary border border-Teratiary-800 font-bold fon-headline rounded-xs cursor-pointer hover:scale-105 transition-transform duration-300 drop-shadow-lg"
+                >EXPLORE</a
+              >
+            </div>
           </div>
         </div>
-      </div>
-      
-      
-        <div class="flex justify-center items-center  pt-18 sm:pt-0 px-10 sm:px-0 truncate z-20">
-          <div class="flex relative max-w-[500px]  aspect-square rounded-full flex items-center justify-center ">
-              <div class="w-full absolute inset-0 border border-primary/20 rounded-lg animate-[spin_20s_linear_infinite]"></div>
-              <div class="w-full absolute inset-4 border border-primary/20 rounded-lg animate-[spin_15s_linear_infinite_reverse]"></div>
-              <img class="w-full h-full object-contain relative z-20 drop-shadow-2xl" src="./assets/images/hero-image.png" alt="">
+
+        <div
+          class="flex justify-center items-center pt-18 md:pt-0 px-10 sm:px-0 truncate z-20"
+        >
+          <div
+            class="flex relative max-w-[500px] aspect-square rounded-full flex items-center justify-center"
+          >
+            <div
+              class="w-full absolute inset-0 border border-primary/20 rounded-lg animate-[spin_20s_linear_infinite]"
+            ></div>
+            <div
+              class="w-full absolute inset-4 border border-primary/20 rounded-lg animate-[spin_15s_linear_infinite_reverse]"
+            ></div>
+            <img
+              class="w-full h-full object-contain relative z-20 rounded-lg drop-shadow-2xl"
+              src="./assets/images/hero-image.png"
+              alt=""
+            />
           </div>
         </div>
-    </section>
+      </section>
+      <section class="flex flex-col lg:px-22 my-20">
+        <div class="max-w-150 mb-10">
+          <h2 class="text-Teratiary text-3xl font-bold my-2">
+            Precision Metrics
+          </h2>
+          <p class="text-Teratiary-800 text-md">
+            Data-driven optimization for your training regimen. Every metric
+            designed to push you further.
+          </p>
+        </div>
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div
+            class="py-8 px-5 sm:px-8 bg-secondary rounded-md border hover:border-primary-200 transtion-all duration-300"
+          >
+            <i
+              class="bg-primary-200 p-3 rounded-lg text-2xl text-primary bi bi-heart-pulse-fill"
+            ></i>
+            <div class="my-10">
+              <h3 class="text-Teratiary text-2xl font-bold my-4">
+                Heart Rate Monitoring
+              </h3>
+              <p class="text-Teratiary-800 text-sm">
+                Real-time BPM alerts and zone tracking to ensure you're training
+                at the optimal intensity.
+              </p>
+            </div>
+          </div>
+          <div
+            class="py-8 px-5 sm:px-8 bg-secondary rounded-md border hover:border-primary-200 transtion-all duration-300"
+          >
+            <i
+              class="bg-primary-200 p-3 rounded-lg text-2xl text-primary bi bi-moon-fill"
+            ></i>
+            <div class="my-10">
+              <h3 class="text-Teratiary text-2xl font-bold my-4">
+                Sleep Analytics
+              </h3>
+              <p class="text-Teratiary-800 text-sm">
+                Deep insights into your REM and deep sleep cycles to maximize
+                physical recovery.
+              </p>
+            </div>
+          </div>
+          <div
+            class="py-8 px-5 sm:px-8 bg-secondary rounded-md border hover:border-primary-200 transtion-all duration-300"
+          >
+            <i
+              class="bg-primary-200 p-3 rounded-lg text-2xl text-primary bi bi-person-walking"
+            ></i>
+            <div class="my-10">
+              <h3 class="text-Teratiary text-2xl font-bold my-4">
+                Activity Tracking
+              </h3>
+              <p class="text-Teratiary-800 text-sm">
+                Every step, every calorie, every goal monitored continuously
+                with high-fidelity sensors.
+              </p>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
 
     <script src="./Js/script.js"></script>
   </body>
