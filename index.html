@@ -6,12 +6,15 @@
     <title>PlusFit</title>
     <link rel="stylesheet" href="./CSS/style.css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <style type="text/tailwindcss">
       @theme {
         --color-primary: #69f8f1;
         --color-primary-100: #00201f;
-        --color-primary-200: #003735;
+        --color-primary-300: #00504d;
+        --color-primary-400: #006a67;
         --color-secondary: #1a1a1a;
+        --color-secondary-100: #313030;
         --color-Teratiary: #ffffff;
         --color-Teratiary-100: #1a1c1c;
         --color-Teratiary-800: #c8c6c5;
@@ -89,7 +92,7 @@
       >
     </nav>
 
-    <main class="mx-2 xs:mx-5">
+    <main class="mx-4 xs:mx-5">
       <section
         class="w-full min-h-[90dvh] my-5 py-5 grid grid-col-1 md:gap-5 md:grid-cols-2"
       >
@@ -485,7 +488,7 @@
       </section>
       <section class="w-full flex justify-center my-15">
         <div
-          class="grid grid-cols-1 md:grid-cols-2 p-4 sm:p-3 justify-items-start sm:justify-items-center sm:py-5 bg-secondary border rounded-lg hover:border-primary-200"
+          class="grid grid-cols-1 gap-10 md:gap-0 md:grid-cols-2 p-4 sm:p-3 justify-items-start sm:justify-items-center sm:py-5 bg-secondary border rounded-lg hover:border-primary-200"
         >
           <div class="flex flex-col w-[100%] sm:w-[70%] gap-10">
             <div class="flex flex-col items-center my-5">
@@ -554,7 +557,7 @@
               </div>
             </div>
           </div>
-          <form id="formContainer">
+          <form id="formContainer" class="w-[100%]">
             <div class="flex flex-col items-center my-5">
               <h2 class="text-Teratiary text-3xl font-headline font-bold">
                 Get in Touch
@@ -570,6 +573,7 @@
                   class="outline-none bg-transparent focus:outline-none focus:border-b-primary py-4 border-b border-Teratiary-800 text-Teratiary-900"
                   type="text"
                   name="name"
+                  required
                   id="name"
                   placeholder="johan Doe"
                 />
@@ -578,8 +582,9 @@
                 <label class="text-Teratiary-800" for="email">Email</label>
                 <input
                   class="outline-none bg-transparent focus:outline-none focus:border-b-primary py-4 border-b-1 border-Teratiary-800 text-Teratiary-900"
-                  type="text"
+                  type="email"
                   name="email"
+                  required
                   id="email"
                   placeholder="johan@example.com"
                 />
@@ -587,6 +592,7 @@
               <div class="input-container flex flex-col m-5">
                 <label class="text-Teratiary-800" for="message">Message</label>
                 <textarea
+                  required
                   class="resize-none bg-transparent focus:outline-none focus:border-b-primary h-40 py-4 border-b border-Teratiary-800 text-Teratiary-900"
                   type="text"
                   name="message"
@@ -605,12 +611,126 @@
             </div>
           </form>
         </div>
-        <div id="notification" class="notification flex gap-2">
-          <i class="text-green-600 bi bi-check-circle-fill"></i> Submitted
-          successfully!
-        </div>
+        <div id="notification" class="notification flex gap-3"></div>
       </section>
     </main>
+    <footer class="w-full flex flex-col bg-secondary">
+      <section
+        class="grid grid-cols-1 justify-items-start gap-5 sm:gap-0 sm:justify-items-center px-10 sm:grid-cols-2 md:grid-cols-4 pt-10 pb-3 border-b-1 border-secondary-100"
+      >
+        <div class="">
+          <div class="flex items-center gap-2">
+            <div class="w-8 h-8">
+              <img
+                class="w-full"
+                src="./assets/images/plusfit_logo.png"
+                alt=""
+              />
+            </div>
+            <h3
+              class="font-headline text-Teratiary text-2xl font-bold text-primary tracking-tighter"
+            >
+              PlusFit
+            </h3>
+          </div>
+          <p class="text-Teratiary-800 my-5">
+            PlusFit is dedicated to pushing the boundaries of human potential
+            through high-precision technology. Our mission is to empower every
+            athlete with the data they need to achieve their peak performance.
+          </p>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold text-Teratiary font-headline">
+            Product
+          </h3>
+          <ul>
+            <li
+              class="text-Teratiary-800 hover:text-primary cursor-pointer transition duration-300 my-3 text"
+            >
+              Features
+            </li>
+            <li
+              class="text-Teratiary-800 hover:text-primary cursor-pointer transition duration-300 my-3 text"
+            >
+              Pricing
+            </li>
+            <li
+              class="text-Teratiary-800 hover:text-primary cursor-pointer transition duration-300 my-3 text"
+            >
+              Roadmaps
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold text-Teratiary font-headline">
+            Support
+          </h3>
+          <ul>
+            <li
+              class="text-Teratiary-800 hover:text-primary cursor-pointer transition duration-300 my-3 text"
+            >
+              Documentation
+            </li>
+            <li
+              class="text-Teratiary-800 hover:text-primary cursor-pointer transition duration-300 my-3 text"
+            >
+              API Reference
+            </li>
+            <li
+              class="text-Teratiary-800 hover:text-primary cursor-pointer transition duration-300 my-3 text"
+            >
+              Contact Us
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold text-Teratiary font-headline">
+            Connect
+          </h3>
+          <ul>
+            <li class="flex items-center gap-2 text-Teratiary-800 my-3 text">
+              <a
+                href="https://github.com/Hossamfcai"
+                target="_blank"
+                class="hover:opacity-75 transition duration-300"
+              >
+                <i class="rounded-lg text-2xl text-primary bi bi-github"></i>
+                <span>Github</span>
+              </a>
+            </li>
+
+            <li class="flex items-center gap-2 text-Teratiary-800 my-3 text">
+              <a
+                href="https://www.linkedin.com/in/hossam-ibrahim-b98a7624a/"
+                target="_blank"
+                class="hover:opacity-75 transition duration-300"
+              >
+                <i class="rounded-lg text-2xl text-primary bi bi-linkedin"></i>
+                <span>Linkedin</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section
+        class="p-4 text-center flex flex-col md:flex-row justify-center md:justify-between gap-2 md:gap-0 md:p-8"
+      >
+        <div>
+          <span
+            class="mx-1 text-Teratiary-800 hover:text-primary cursor-pointer"
+            >Privacy Policy</span
+          >
+          <span
+            class="mx-1 text-Teratiary-800 hover:text-primary cursor-pointer"
+            >Terms of Service</span
+          >
+        </div>
+        <p class="text-center md:text-start text-Teratiary-800">
+          © 2024 PlusFit Tech. All rights reserved. Engineered for peak
+          performance.
+        </p>
+      </section>
+    </footer>
 
     <script src="./Js/script.js"></script>
   </body>
