@@ -59,3 +59,35 @@ function displayNotification(notificationData) {
     }, 300);
   }, 2000);
 }
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target
+          .querySelectorAll(".fade-scroll")
+          .forEach((el) => el.classList.add("in-view"));
+        observer.unobserve(entry.target); // Runs animation once on scroll arrival
+      }
+    });
+  },
+  { threshold: 0.15 },
+);
+
+document
+  .querySelectorAll(".philosophy-section")
+  .forEach((sec) => observer.observe(sec));
+
+function openMapModal(mapUrl) {
+  const modal = document.getElementById("mapModal");
+  const iframe = document.getElementById("mapIframe");
+  iframe.src = mapUrl;
+  modal.classList.remove("hidden");
+}
+
+function closeMapModal() {
+  const modal = document.getElementById("mapModal");
+  const iframe = document.getElementById("mapIframe");
+  iframe.src = "";
+  modal.classList.add("hidden");
+}
