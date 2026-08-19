@@ -1,3 +1,110 @@
 * {
   box-sizing: border-box;
 }
+.input-container input:-webkit-autofill,
+.input-container input:-webkit-autofill:hover,
+.input-container input:-webkit-autofill:focus,
+.input-container input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 1000px #1a1a1a inset !important;
+  -webkit-text-fill-color: #ffffff !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.notification {
+  position: fixed;
+  z-index: 9999;
+  display: none; /* Hidden by default */
+  padding: 12px 20px;
+  background-color: #69f8f1; /* Green success background */
+  color: #1a1a1a;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 8px;
+  box-shadow:
+    0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Mobile Position (Default): Top Center */
+@media (max-width: 767px) {
+  .notification {
+    top: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .notification.show {
+    display: block;
+    animation: slideDownMobile 0.3s ease-out forwards;
+  }
+
+  .notification.hide {
+    animation: fadeOutMobile 0.3s ease-in forwards;
+  }
+}
+
+/* Desktop Position: Left Bottom */
+@media (min-width: 768px) {
+  .notification {
+    bottom: 24px;
+    left: 24px;
+    top: auto;
+    transform: none;
+  }
+
+  .notification.show {
+    display: block;
+    animation: slideUpDesktop 0.3s ease-out forwards;
+  }
+
+  .notification.hide {
+    animation: fadeOutDesktop 0.3s ease-in forwards;
+  }
+}
+
+/* Animations - Mobile */
+@keyframes slideDownMobile {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -20px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+@keyframes fadeOutMobile {
+  from {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+  to {
+    opacity: 0;
+    transform: translate(-50%, -20px);
+  }
+}
+
+/* Animations - Desktop */
+@keyframes slideUpDesktop {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOutDesktop {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}

@@ -149,9 +149,11 @@
             designed to push you further.
           </p>
         </div>
-        <section class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <section
+          class="grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center"
+        >
           <div
-            class="py-8 px-5 sm:px-8 bg-secondary rounded-lg border hover:border-primary-200 transtion-all duration-300"
+            class="w-[90%] xs:w-auto py-8 px-5 sm:px-8 bg-secondary rounded-lg border hover:border-primary-200 transtion-all duration-300"
           >
             <i
               class="bg-primary-200 p-3 rounded-lg text-2xl text-primary bi bi-heart-pulse-fill"
@@ -167,7 +169,7 @@
             </div>
           </div>
           <div
-            class="py-8 px-5 sm:px-8 bg-secondary rounded-md border hover:border-primary-200 transtion-all duration-300"
+            class="w-[90%] xs:w-auto py-8 px-5 sm:px-8 bg-secondary rounded-md border hover:border-primary-200 transtion-all duration-300"
           >
             <i
               class="bg-primary-200 p-3 rounded-lg text-2xl text-primary bi bi-moon-fill"
@@ -183,7 +185,7 @@
             </div>
           </div>
           <div
-            class="py-8 px-5 sm:px-8 bg-secondary rounded-md border hover:border-primary-200 transtion-all duration-300"
+            class="w-[90%] xs:w-auto py-8 px-5 sm:px-8 bg-secondary rounded-md border hover:border-primary-200 transtion-all duration-300"
           >
             <i
               class="bg-primary-200 p-3 rounded-lg text-2xl text-primary bi bi-person-walking"
@@ -396,7 +398,6 @@
             Experience PlusFit technology at our flagship locations worldwide.
           </p>
         </div>
-
         <section
           class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 justify-items-center"
         >
@@ -481,6 +482,133 @@
             </div>
           </div>
         </section>
+      </section>
+      <section class="w-full flex justify-center my-15">
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 p-4 sm:p-3 justify-items-start sm:justify-items-center sm:py-5 bg-secondary border rounded-lg hover:border-primary-200"
+        >
+          <div class="flex flex-col w-[100%] sm:w-[70%] gap-10">
+            <div class="flex flex-col items-center my-5">
+              <h2 class="text-Teratiary text-3xl font-headline font-bold">
+                Contact Info
+              </h2>
+              <p class="text-Teratiary-800 text-sm text-center my-2">
+                Reach out to our team for specialized support or partnership
+                inquiries.
+              </p>
+            </div>
+            <div class="flex flex-col gap-4">
+              <div class="grid grid-cols-12 my-3">
+                <i
+                  class="col-span-2 bi bi-telephone-fill text-2xl text-primary text-center"
+                ></i>
+                <div class="flex flex-col col-span-10">
+                  <h3 class="text-md text-Teratiary font-bold">Phone</h3>
+                  <p class="text-md text-Teratiary-800">01003076053</p>
+                </div>
+              </div>
+              <div class="grid grid-cols-12 my-3">
+                <i
+                  class="col-span-2 bi bi-geo-alt-fill text-2xl text-primary text-center"
+                ></i>
+                <div class="flex flex-col col-span-10">
+                  <h3 class="text-md text-Teratiary font-bold">Address</h3>
+                  <p class="text-md text-Teratiary-800">
+                    123 Performance Way, New York, NY 10001
+                  </p>
+                </div>
+              </div>
+              <div class="grid grid-cols-12 my-3">
+                <i
+                  class="col-span-2 bi bi-envelope-fill text-2xl text-primary text-center"
+                ></i>
+                <div class="flex flex-col col-span-10">
+                  <h3 class="text-md text-Teratiary font-bold">Email</h3>
+                  <p class="text-md text-Teratiary-800">support@plusfit.tech</p>
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-col gap-5">
+              <h2 class="text-Teratiary-800 text-2xl tracking-widest">
+                Follow us
+              </h2>
+              <div class="flex gap-2">
+                <a
+                  href="https://www.linkedin.com/in/hossam-ibrahim-b98a7624a/"
+                  target="_blank"
+                  class="hover:opacity-75 transition duration-300"
+                >
+                  <i
+                    class="bg-primary-200 p-2 rounded-lg text-3xl text-primary bi bi-linkedin"
+                  ></i
+                ></a>
+                <a
+                  href="https://github.com/Hossamfcai"
+                  target="_blank"
+                  class="hover:opacity-75 transition duration-300"
+                >
+                  <i
+                    class="bg-primary-200 p-2 rounded-lg text-3xl text-primary bi bi-github"
+                  ></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <form id="formContainer">
+            <div class="flex flex-col items-center my-5">
+              <h2 class="text-Teratiary text-3xl font-headline font-bold">
+                Get in Touch
+              </h2>
+              <p class="text-Teratiary-800 text-sm text-center my-2">
+                Questions about specs, compatibility, or enterprise orders?
+              </p>
+            </div>
+            <div class="flex flex-col">
+              <div class="input-container flex flex-col m-5">
+                <label class="text-Teratiary-800" for="name">Name</label>
+                <input
+                  class="outline-none bg-transparent focus:outline-none focus:border-b-primary py-4 border-b border-Teratiary-800 text-Teratiary-900"
+                  type="text"
+                  name="name"
+                  id="name"
+                  placeholder="johan Doe"
+                />
+              </div>
+              <div class="input-container flex flex-col m-5">
+                <label class="text-Teratiary-800" for="email">Email</label>
+                <input
+                  class="outline-none bg-transparent focus:outline-none focus:border-b-primary py-4 border-b-1 border-Teratiary-800 text-Teratiary-900"
+                  type="text"
+                  name="email"
+                  id="email"
+                  placeholder="johan@example.com"
+                />
+              </div>
+              <div class="input-container flex flex-col m-5">
+                <label class="text-Teratiary-800" for="message">Message</label>
+                <textarea
+                  class="resize-none bg-transparent focus:outline-none focus:border-b-primary h-40 py-4 border-b border-Teratiary-800 text-Teratiary-900"
+                  type="text"
+                  name="message"
+                  id="message"
+                  placeholder="How can we help you hit your target?"
+                ></textarea>
+              </div>
+            </div>
+            <div class="w-full flex my-3 px-5">
+              <button
+                type="submit"
+                class="w-full py-2 bg-primary hover:opacity-75 cursor-pointer font-bold"
+              >
+                Send Massage
+              </button>
+            </div>
+          </form>
+        </div>
+        <div id="notification" class="notification flex gap-2">
+          <i class="text-green-600 bi bi-check-circle-fill"></i> Submitted
+          successfully!
+        </div>
       </section>
     </main>
 
