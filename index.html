@@ -45,7 +45,11 @@
   </head>
   <body class="bg-neutral font-body">
     <nav
-      class="flex w-full justify-between md:justify-around items-center px-5 lg:px-18 py-4 border border-b-Teratiary-100"
+      style="
+        background-color: rgba(19, 19, 19, 0.4);
+        backdrop-filter: blur(20px);
+      "
+      class="fixed top-0 z-100 flex w-full justify-between md:justify-around items-center px-5 lg:px-18 py-4 border border-b-Teratiary-100"
     >
       <div class="flex items-center gap-2">
         <div class="w-8 h-8">
@@ -99,7 +103,7 @@
       >
     </nav>
 
-    <main class="mx-4 xs:mx-5">
+    <main class="mx-4 xs:mx-5 mt-24">
       <!-- HERO SECTION -->
       <section
         class="w-full min-h-[90dvh] my-5 py-5 grid grid-cols-1 md:gap-5 md:grid-cols-2"
